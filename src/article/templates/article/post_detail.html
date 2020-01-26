@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- CSS-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <h2>{{post.header}}</h2>
+  <div>
+    {{post.content}}
+  </div>
+  <p>Oluşturuldu: {{post.created}}</p>
+  <p>En son düzenlendi: {{post.updated}}</p>
+  <p>Beğeni sayısı: {{post.liked}}</p>
+  
+  {% if comment %}
+    <h5>Birkaç yorum var.</h5>
+  {% else %}
+    <h5>Yorum yok.</h5>
+  {% endif %}
+    
+</body>
+</html>
