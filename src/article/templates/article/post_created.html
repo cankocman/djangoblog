@@ -4,13 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Post Created</title>
 </head>
 <body>
-  <form action="" method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <a href="../posts/created"></a><button type="submit">Create Post</button>
-  </form>
+  <h1>{{ form.header }} HAS BEEN SUCCESFULLY CREATED</h1>
 </body>
 </html>

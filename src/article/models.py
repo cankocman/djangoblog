@@ -24,3 +24,6 @@ class Comment(models.Model):
   
   def __str__(self):
     return self.title#customizes visible name on adminpanel
+
+class Created(models.Model):
+  content = models.CharField(max_length=50)
